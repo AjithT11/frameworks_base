@@ -274,7 +274,7 @@ public class FODCircleView extends ImageView implements ConfigurationListener, T
         mPaintFingerprint.setColor(res.getColor(R.color.config_fodColor));
         mPaintFingerprint.setAntiAlias(true);
 
-        mTargetUsesInKernelDimming = res.getBoolean(com.android.internal.R.bool.config_targetUsesInKernelDimming);
+        mTargetUsesInKernelDimming = true;
 
         mPaintFingerprintBackground.setColor(res.getColor(R.color.config_fodColorBackground));
         mPaintFingerprintBackground.setAntiAlias(true);
@@ -475,7 +475,7 @@ public class FODCircleView extends ImageView implements ConfigurationListener, T
         setDim(true);
         dispatchPress();
 
-        setImageDrawable(null);
+        setImageResource(R.drawable.fod_icon_pressed);
         updateIconDim();
         invalidate();
     }
